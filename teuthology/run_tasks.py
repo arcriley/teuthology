@@ -98,7 +98,7 @@ def run_tasks(tasks, ctx):
 
         if ctx.config.get('interactive-on-error'):
             from .task import interactive
-            log.warning('Saw failure, going into interactive mode...')
+            log.warning('1: Saw failure, going into interactive mode...')
             interactive.task(ctx=ctx, config=None)
         # Throughout teuthology, (x,) = y has been used to assign values
         # from yaml files where only one entry of type y is correct.  This
@@ -135,7 +135,7 @@ def run_tasks(tasks, ctx):
                     if ctx.config.get('interactive-on-error'):
                         from .task import interactive
                         log.warning(
-                            'Saw failure, going into interactive mode...')
+                            '2: Saw failure, going into interactive mode...')
                         interactive.task(ctx=ctx, config=None)
                 else:
                     if suppress:
